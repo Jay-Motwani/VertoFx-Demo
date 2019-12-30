@@ -1,39 +1,42 @@
 from selenium.webdriver.support.select import Select
 
+global first_name
+first_name = "firstName"
+global last_name
+last_name = "lastName"
+global email
+email = "email"
+global country_code
+country_code = "countryCode"
+global contact_number
+contact_number = "phone"
+global password
+password = "password"
+global confirm_password
+confirm_password = "confirmPassword"
 
-class ActivationForm():
-    def __init__(self, driver):
-        self.driver = driver
-        self.first_name = "firstName"
-        self.last_name = "lastName"
-        self.email = "email"
-        self.country_code = "countryCode"
-        self.contact_number = "phone"
-        self.password = "password"
-        self.confirm_password = "confirmPassword"
 
-    def enter_username(self, firstname, lastname):
-        self.driver.find_element_by_name(self.first_name).send_keys(firstname)
-        self.driver.find_element_by_name(self.last_name).send_keys(lastname)
-        print("First and lastname fields are populated")
+def enter_username(driver, firstname, lastname):
+    driver.find_element_by_name(first_name).send_keys(firstname)
+    driver.find_element_by_name(last_name).send_keys(lastname)
 
-    def enter_email(self, email):
-        self.driver.find_element_by_name(self.email).send_keys(email)
-        print("Email field populated")
 
-    def select_country_code(self, country_code):
-        select = Select(self.driver.find_element_by_name(self.country_code))
-        select.select_by_value(country_code)
-        print("Country code selected")
+def enter_email(driver, email):
+    driver.find_element_by_name(email).send_keys(email)
 
-    def enter_contact_number(self, contact_number):
-        self.driver.find_element_by_name(self.contact_number).send_keys(contact_number)
-        print("Contact number filed is populated")
 
-    def enter_password(self, password):
-        self.driver.find_element_by_name(self.password).send_keys(password)
-        print("Password filed is populated")
+def select_country_code(driver, country_code):
+    select = Select(driver.find_element_by_name(country_code))
+    select.select_by_value(country_code)
 
-    def enter_confirm_password(self, confirm_password):
-        self.driver.find_element_by_name(self.confirm_password).send_keys(confirm_password)
-        print("Confirm password filed is populated")
+
+def enter_contact_number(driver, contact_number):
+    driver.find_element_by_name(contact_number).send_keys(contact_number)
+
+
+def enter_password(driver, password):
+    driver.find_element_by_name(password).send_keys(password)
+
+
+def enter_confirm_password(driver, confirm_password):
+    driver.find_element_by_name(confirm_password).send_keys(confirm_password)
