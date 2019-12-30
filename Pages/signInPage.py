@@ -1,5 +1,9 @@
 from selenium.webdriver.common.by import By
+<<<<<<< HEAD
 from Base import VertoUtil
+=======
+from Base.VertoUtil import vertoFxUtilities
+>>>>>>> AnilK
 
 
 class signIn:
