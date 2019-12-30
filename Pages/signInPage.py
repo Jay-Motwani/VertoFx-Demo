@@ -1,9 +1,6 @@
 from selenium.webdriver.common.by import By
-<<<<<<< HEAD
-from Base import VertoUtil
-=======
-from Base.VertoUtil import vertoFxUtilities
->>>>>>> AnilK
+
+from Base.VertoUtil import Utilities
 
 
 class signIn:
@@ -19,11 +16,11 @@ class signIn:
         self.ReSendOtpBtn = ".btn.btn-custom-navy-outline.w-100[type='button']"
 
     def sign_in(self, mail, password, otp):
-
+        utility = Utilities(self.driver)
         self.driver.find_element_by_name(self.email).send_keys(mail)
         self.driver.find_element_by_name(self.password).send_keys(password)
-        VertoUtil.clickElement(self.driver.find_element_by_css_selector(self.SignInBtn))
-        VertoUtil.dynamicWait(By.NAME, self.OTP)
+        utility.Click_Element(self.driver.find_element_by_css_selector(self.SignInBtn))
+        utility.DynamicWait(By.NAME, self.OTP)
         self.driver.find_element_by_name(self.OTP).send_keys(otp)
-        VertoUtil.clickElement(self.driver.find_element_by_css_selector(self.ProceedBtn))
-        VertoUtil.waitForProgressSpinner()
+        utility.Click_Element(self.driver.find_element_by_css_selector(self.ProceedBtn))
+        utility.WaitForProgressSpinner()
