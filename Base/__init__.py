@@ -1,2 +1,2 @@
-from . import InitiateBrowser
-from . import VertoUtil
+from . import initiateBrowser
+from . import vertoUtil
