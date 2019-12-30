@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d17451d-7545-4ae9-9e3b-580d7ee51336" name="Default Changelist" comment="" />
+    <list default="true" id="9d17451d-7545-4ae9-9e3b-580d7ee51336" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCases/test_login_to_verto.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCases/test_login_to_verto.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +19,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VNibxQBm74BPQucVdAiiGpSg0u" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,11 +30,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="D:/git-test-verto" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
-    <configuration name="LoginToVerto" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\anild\Documents\PycharmProjects\VertoFx-Demo\TestReports" />
+      <recent name="C:\Users\anild\Documents\PycharmProjects\VertoFx-Demo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.test_login_to_verto (1)">
+    <configuration name="test_login_to_verto (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Automation_VertoFx" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -38,7 +53,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestCases/LoginToVerto.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestCases/test_login_to_verto.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_login_to_verto" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Automation_VertoFx" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\anild\Documents\PycharmProjects\VertoFx-Demo\TestCases\test_login_to_verto.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -49,7 +85,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.LoginToVerto" />
+        <item itemvalue="Python.test_login_to_verto (1)" />
+        <item itemvalue="Python.test_login_to_verto" />
       </list>
     </recent_temporary>
   </component>
@@ -76,40 +113,72 @@
       <option name="presentableId" value="Default" />
       <updated>1577100045211</updated>
     </task>
+    <task id="LOCAL-00001" summary="Verto Login Page automation running end to end">
+      <created>1577556033068</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577556033068</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="s" />
-    <option name="LAST_COMMIT_MESSAGE" value="s" />
+    <MESSAGE value="Verto Login Page automation running end to end" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verto Login Page automation running end to end" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="739" y="266" key="FileChooserDialogImpl" timestamp="1577355896268">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577603734203">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1577603734203" />
+    <state x="406" y="6" key="CommitChangelistDialog2" timestamp="1577556032174">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="406" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577556032174" />
+    <state x="147" y="64" key="DiffContextDialog" timestamp="1577555976113">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="64" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1577555976113" />
+    <state x="591" y="211" key="FileChooserDialogImpl" timestamp="1577512977501">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="591" y="211" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577512977501" />
     <state x="739" y="266" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1577355896268" />
-    <state width="1362" height="328" key="GridCell.Tab.0.bottom" timestamp="1577435579245">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1577530850673">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577530850673" />
     <state width="1362" height="328" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577435579245" />
-    <state width="1362" height="328" key="GridCell.Tab.0.center" timestamp="1577435579245">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1577530850673">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577530850673" />
     <state width="1362" height="328" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577435579245" />
-    <state width="1362" height="328" key="GridCell.Tab.0.left" timestamp="1577435579245">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1577530850673">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577530850673" />
     <state width="1362" height="328" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577435579245" />
-    <state width="1362" height="328" key="GridCell.Tab.0.right" timestamp="1577435579245">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1577530850673">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577530850673" />
     <state width="1362" height="328" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577435579245" />
-    <state x="463" y="166" key="SettingsEditor" timestamp="1577355763008">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="370" y="109" key="SettingsEditor" timestamp="1577556919523">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="370" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577556919523" />
     <state x="463" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577355763008" />
-    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1577355570901">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1577554931726">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577554931726" />
+    <state x="534" y="275" key="com.intellij.ide.util.TipDialog" timestamp="1577683188748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="534" y="275" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1577683188748" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577355570901" />
     <state x="790" y="315" key="svn.repositoryBrowser" timestamp="1577355884437">
       <screen x="0" y="0" width="1920" height="1040" />
