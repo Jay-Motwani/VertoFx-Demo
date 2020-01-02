@@ -1,31 +1,35 @@
+from sys import argv
+
+import allure
 from Base import Paths, ReadExcel
 from Base.InitiateBrowser import triggerBrowser
 from Pages.signInPage import signIn
-import pytest
-from Base.InitiateBrowser import triggerBrowser
-from Pages.signInPage import signIn
-import allure
 import time
 
+global Browserarg
+global urlarg
+Browserarg, urlarg = argv
 
 class TestLogin:
-    @allure.description("Launching browser and opening VertoFx")
-    def test_browser_setup(self):
-        global browser
-        global driver
+    def readData(self):
         global email
         global password
         global otp
-
         path = Paths.getfile("vertofx1")
-        url = Paths.GetUrl("uat")
         sheetname = "credentials"
         email = ReadExcel.ReadingFile.getemails(path, sheetname)
         password = ReadExcel.ReadingFile.getpassword(path, sheetname)
         otp = ReadExcel.ReadingFile.getotp(path, sheetname)
 
+    @allure.description("Launching browser and opening VertoFx")
+    def test_browser_setup(self, urlarg, Browserarg):
+        global browser
+        global driver
+
+        url = Paths.GetUrl(urlarg)
+
         driver = triggerBrowser()
-        browser = driver.open_browser(url, "chrome")
+        browser = driver.open_browser(url, Browserarg)
         browser_title = browser.title
         assert browser_title == "Verto Platform | B2B Currency Exchange Marketplace"
 
@@ -36,13 +40,15 @@ class TestLogin:
         if s == 1:
             sign_in.sign_in(email[0], password[0], str(otp[0]))
         elif s > 1:
-            for i in range(0,s):
+            for i in range(0, s):
                 sign_in.sign_in(email[i], password[i], str(otp[i]))
         time.sleep(10)
 
     @allure.description("Closing browser")
     def test_close_browser(self):
         driver.close_browser()
+
+
 
 
 if __name__ == "__main__":
