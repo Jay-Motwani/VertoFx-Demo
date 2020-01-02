@@ -14,6 +14,8 @@ class signIn:
         self.OTP = "otp"
         self.ProceedBtn = ".btn.btn-custom-navy.w-100[type='submit']"
         self.ReSendOtpBtn = ".btn.btn-custom-navy-outline.w-100[type='button']"
+        self.logoutdd = ".inline.v-mid.text-left"
+        self.logout = "a[href='/auth/logout']"
 
     def sign_in(self, mail, password, otp):
         utility = Utilities(self.driver)
@@ -24,3 +26,18 @@ class signIn:
         self.driver.find_element_by_name(self.OTP).send_keys(otp)
         utility.Click_Element(self.driver.find_element_by_css_selector(self.ProceedBtn))
         utility.WaitForProgressSpinner()
+
+
+class logout:
+    def __init__(self, driver):
+        self.driver = driver
+        self.SignInBtn = ".btn.btn-custom-navy.w-100[type='submit']"
+        self.logoutdd = ".inline.v-mid.text-left"
+        self.lgout = "a[href='/auth/logout']"
+
+    def logout(self):
+        utility = Utilities(self.driver)
+        utility.Click_Element(self.driver.find_element_by_css_selector(self.logoutdd))
+        utility.DynamicWait(self.lgout)
+        utility.Click_Element(self.driver.find_element_by_css_selector(self.lgout))
+        utility.DynamicWait(self.SignInBtn)
