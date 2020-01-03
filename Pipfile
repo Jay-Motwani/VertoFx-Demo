@@ -9,6 +9,11 @@ verify_ssl = true
 selenium = "*"
 pytest = "*"
 allure-pytest = "*"
+pandas = "*"
+numpy = "*"
+cython = "*"
+xlrd = "*"
+xlwt = "*"
 
 [requires]
 python_version = "3.8"
