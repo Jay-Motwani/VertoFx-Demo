@@ -1,20 +1,22 @@
-from sys import argv
+import sys
 
 from selenium import webdriver
 from Base import Paths
 
-global Browserarg
-global urlarg
-Browserarg, urlarg = argv
+
+global browser
+global url
+url = str(sys.argv[2])
+browser = str(sys.argv[1])
 
 class triggerBrowser:
-    def open_browser(self, urlarg, Browserarg):
+    def open_browser(self, url, browser):
         driver_path = Paths.GetBrowserPath(Browserarg)
-        if Browserarg == "chrome":
+        if browser == "chrome":
             self.driver = webdriver.Chrome(executable_path=driver_path)
 
         self.driver.maximize_window()
-        self.driver.get(urlarg)
+        self.driver.get(url)
         return self.driver
 
     def close_browser(self):

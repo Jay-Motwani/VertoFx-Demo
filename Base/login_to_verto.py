@@ -1,4 +1,4 @@
-from sys import argv
+import sys
 
 import allure
 from Base import Paths, ReadExcel
@@ -6,9 +6,11 @@ from Base.InitiateBrowser import triggerBrowser
 from Pages.signInPage import signIn
 import time
 
-global Browserarg
-global urlarg
-Browserarg, urlarg = argv
+global browser1
+global url
+url = str(sys.argv[1])
+browser1 = str(sys.argv[2])
+
 
 class TestLogin:
     def readData(self):
@@ -22,14 +24,14 @@ class TestLogin:
         otp = ReadExcel.ReadingFile.getotp(path, sheetname)
 
     @allure.description("Launching browser and opening VertoFx")
-    def test_browser_setup(self, urlarg, Browserarg):
+    def test_browser_setup(self, url, browser1):
         global browser
         global driver
 
-        url = Paths.GetUrl(urlarg)
+        url = Paths.GetUrl(url)
 
         driver = triggerBrowser()
-        browser = driver.open_browser(url, Browserarg)
+        browser = driver.open_browser(url, browser1)
         browser_title = browser.title
         assert browser_title == "Verto Platform | B2B Currency Exchange Marketplace"
 
@@ -53,6 +55,6 @@ class TestLogin:
 
 if __name__ == "__main__":
     new_var = TestLogin()
-    new_var.test_browser_setup()
+    new_var.test_browser_setup(url, browser1)
     new_var.test_login()
     new_var.test_close_browser()

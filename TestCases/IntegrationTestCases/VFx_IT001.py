@@ -1,28 +1,33 @@
-from sys import argv
-
+import sys
 import allure
+from urllib3.util import request
 
-from Base import Paths, ReadExcel
 from Base.SignUP import SigingUp
 from Base.login_to_verto import TestLogin
-from Base.AuthorizeNewUser import Authorize
+
+global browser
+global url
+
+url = ""
+browser = ""
 
 
-global Browserarg
-global urlarg
-Browserarg, urlarg = argv
+class SignUp_Flow:
 
-class SignUp:
+    def pytest_addoption(parser):
+        parser.addoption("--url", action="store")
+        parser.addoption("--browser", action="store")
 
     @allure.description("Sign up for verto")
     def test_signup(self):
-         cl = TestLogin()
-         cl.test_browser_setup(urlarg, Browserarg)
-         c2 = SigingUp()
-         c2.signup()
-         c2.AdminAuth()
-
-         
+        cl = TestLogin()
+        cl.test_browser_setup(url, browser)
+        c2 = SigingUp()
+        c2.signup()
+        c2.AdminAuth()
 
 
+if __name__ == "__main__":
 
+    obj = SignUp_Flow()
+    obj.test_signup()
