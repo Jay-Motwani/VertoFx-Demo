@@ -7,13 +7,10 @@ from selenium.webdriver.support.select import Select
 from Base import Paths, ReadExcel
 from Base.AuthorizeNewUser import Authorize
 from Base.VertoUtil import Utilities
-from TestCases.IntegrationTestCases.VFx_IT001 import SignUp
+
 
 
 class SignUpproc:
-    global util
-    util = Utilities()
-
     def __init__(self, driver):
 
         self.driver = driver
@@ -62,7 +59,12 @@ class SignUpproc:
         self.lgodd = "div.inline.v-mid.text-left"
         self.lgout = "a[href='/auth/logout']"
 
+
+
+
     def InitiateSignUP(self):
+        global util
+        util = Utilities()
         signupbtn = self.driver.find_element_by_link_text(self.signup)
 
         util.DynamicWait(signupbtn)
@@ -152,13 +154,10 @@ class SignUpproc:
         util.WaitForProgressSpinner()
 
     def UploadBusDocuments(self, doc1):
-        global signu
-        signu = SignUp()
-
         docudd = self.driver.find_element_by_css_selector(self.docdd)
         util.Click_Element(docudd)
         Select(docudd).select_by_visible_text(doc1)
-        signu.Uploadfile("/Data/drip.png")
+        self.Uploadfile("/Data/drip.png")
         util.WaitForProgressSpinner()
 
     def FillPersonalDetails(self, fname, lname, tel, dob, email, ownership, peradd, perin, city, country):
@@ -186,8 +185,8 @@ class SignUpproc:
     def UploadPersonalDoc(self, doc1):
         docudd = self.driver.find_element_by_css_selector(self.docdd)
         util.Click_Element(docudd)
-        Select(docudd).select_by_visible_text(doc1)
-        signu.Uploadfile("/Data/driphydro.jfif")
+        Select(docudd).select_by_v==ible_text(doc1)
+        self.Uploadfile("/Data/driphydro.jfif")
         util.WaitForProgressSpinner()
 
     def Logout(self):
@@ -206,7 +205,7 @@ class SignUpproc:
         util.DynamicWait(self.dashbflex)
 
         assert self.driver.find_element_by_css_selector(self.dashbflex).getAttribute(
-            "background-color") is "rgb(243, 180, 36)";
+            "background-color") == "rgb(243, 180, 36)";
 
 
 class SigingUp:
@@ -285,8 +284,7 @@ class SigingUp:
         answ = ReadExcel.ReadingFile.getanswer(path, sheetname)
 
     def signup(self):
-        nv = SigingUp()
-        nv.readData()
+        self.readData()
         new_var = SignUpproc()
         new_var.InitiateSignUP()
         for i in range(0, len(Fname)):
@@ -309,10 +307,10 @@ class SigingUp:
             new_var.FillQuestionier(answ[0], answ[1])
             divheader = self.driver.find_elements(By.CSS_SELECTOR, self.UItext)
 
-            assert divheader[0].text is "Company Name"
-            assert divheader[1].text is "e-Wallet Balance"
-            assert divheader[2].text is "My Open Orders"
-            assert divheader[3].text is "My Offers"
+            assert divheader[0].text == "Company Name"
+            assert divheader[1].text == "e-Wallet Balance"
+            assert divheader[2].text == "My Open Orders"
+            assert divheader[3].text == "My Offers"
 
             new_var.Logout()
 
